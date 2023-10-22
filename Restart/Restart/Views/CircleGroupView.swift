@@ -16,6 +16,7 @@ struct CircleGroupView: View {
     // MARK: BODY
     var body: some View {
         ZStack {
+        
             Circle()
                 .stroke(ShapeColor.opacity(ShapeOpacity), lineWidth: 40)
                 .frame(width: 260, height: 260, alignment: .center)
