@@ -17,6 +17,8 @@ struct OnboardingView: View {
     @State private var buttonOffset: CGFloat = 0
     @State private var isAnimating: Bool = false
     @State private var imageOffset: CGSize = .zero
+    @State private var indicatorOpacity: Double = 1.0
+    @State private var textTitle: String = "Share."
     
     
     //MARK: BODY
@@ -32,10 +34,12 @@ struct OnboardingView: View {
                 Spacer()
                 
                 VStack(spacing: 0) {
-                    Text("Share.")
+                    Text(textTitle)
                         .font(.system(size: 60))
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
+                        .transition(.opacity)
+                        .id(textTitle)
                     
                     Text("""
                     It's not how much we give but
@@ -74,10 +78,19 @@ struct OnboardingView: View {
                                     if abs(imageOffset.width) <= 150 {
                                         imageOffset = gesture.translation
                                         
+                                        withAnimation(.easeInOut(duration: 0.5)) {
+                                            indicatorOpacity = 0
+                                            textTitle = "Give."
+                                        }
                                     }
                                 })
                                 .onEnded({ _ in
                                     imageOffset = .zero
+                                    
+                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                        indicatorOpacity = 1
+                                        textTitle = "Share."
+                                    }
                                 })
                         )//: GESTURE
                         .animation(.easeOut(duration: 1), value: imageOffset)
@@ -89,6 +102,7 @@ struct OnboardingView: View {
                         .offset(y: 20)
                         .opacity(isAnimating ? 1: 0)
                         .animation(.easeOut(duration: 1).delay(2), value: isAnimating)
+                        .opacity(indicatorOpacity)
                     ,alignment: .bottom
                 )
                 
@@ -169,6 +183,7 @@ struct OnboardingView: View {
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : 40)
                 .animation(.easeOut, value: isAnimating)
+                
                 
                 
             } //:VSTACK
