@@ -15,7 +15,7 @@ struct HomeView: View {
     var body: some View {
         
         VStack(spacing: 20) {
-            
+            Color(.systemBackground)
             // MARK: HEADER
             
             Spacer()
@@ -48,6 +48,7 @@ struct HomeView: View {
             // MARK: FOOTER
             Button(action: {
                 withAnimation(Animation.easeOut(duration: 3)) {
+                    playSound(sound: "success", type: "m4a")
                     isOnboardingViewActive = true
                 }
                 
