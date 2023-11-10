@@ -12,6 +12,7 @@
 		8F18DC792AF8FC52000427C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F18DC782AF8FC52000427C8 /* Assets.xcassets */; };
 		8F18DC7C2AF8FC52000427C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F18DC7B2AF8FC52000427C8 /* Preview Assets.xcassets */; };
 		8FBB0B1D2AFE9A80008646ED /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB0B1C2AFE9A80008646ED /* InfoPanelView.swift */; };
+		8FF6F1EC2AFE00870021C291 /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF6F1EB2AFE00870021C291 /* ControlImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8F18DC782AF8FC52000427C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F18DC7B2AF8FC52000427C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FBB0B1C2AFE9A80008646ED /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
+		8FF6F1EB2AFE00870021C291 /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				8F18DC742AF8FC51000427C8 /* PinchApp.swift */,
 				8FBB0B1C2AFE9A80008646ED /* InfoPanelView.swift */,
+				8FF6F1EB2AFE00870021C291 /* ControlImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF6F1EC2AFE00870021C291 /* ControlImageView.swift in Sources */,
 				8F18DC772AF8FC51000427C8 /* ContentView.swift in Sources */,
 				8F18DC752AF8FC51000427C8 /* PinchApp.swift in Sources */,
 				8FBB0B1D2AFE9A80008646ED /* InfoPanelView.swift in Sources */,

@@ -23,7 +23,7 @@ struct ContentView: View {
     // MARK: - CONTENT
     
     var body: some View {
-
+        
         NavigationView {
             ZStack {
                 Color.clear
@@ -62,7 +62,7 @@ struct ContentView: View {
                                 }
                                 
                             }
-                        )
+                    )
                 
             } //: ZSTACK
             .navigationTitle("Pinch & Zoom")
@@ -76,13 +76,48 @@ struct ContentView: View {
                     .padding(.horizontal)
                     .padding(.top, 30)
                 ,alignment: .top
-                )
-            
-        } //: NAVIGATION
+            )
+            // MARK: - CONTROLS
+            .overlay(
+                Group {
+                    HStack {
+                        // SCALE DOWN
+                        Button {
+                            // Some action
+                        } label: {
+                            ControlImageView(icon: "minus.magnifyingglass")
 
+                        }
+                        // RESET
+                        Button {
+                            // Some action
+                        } label: {
+                            ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
+
+                        }
+                        
+                        // SCALE UP
+                        Button {
+                            // Some action
+                        } label: {
+                            ControlImageView(icon: "plus.magnifyingglass")
+
+                        }
+                    } //: CONTROLS
+                    .padding(EdgeInsets(top:12, leading: 20, bottom: 12, trailing: 20))
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    
+                }
+                    .padding(.bottom, 30)
+                , alignment: .bottom
+            )
+        } //: NAVIGATION
+        
     }
 }
 
 #Preview {
     ContentView()
+        .preferredColorScheme(.dark)
 }
