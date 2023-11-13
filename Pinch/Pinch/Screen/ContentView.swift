@@ -38,7 +38,7 @@ struct ContentView: View {
                     .animation(.linear(duration: 1), value: isAnimating)
                     .offset(x: imageOffset.width, y: imageOffset.height)
                     .scaleEffect(imageScale)
-                // MARK: TAP GESTURE
+                // MARK: DOUBLE TAP GESTURE
                     .onTapGesture(count: 2, perform: {
                         if imageScale == 1 {
                             withAnimation(.spring()) {
@@ -83,14 +83,22 @@ struct ContentView: View {
                     HStack {
                         // SCALE DOWN
                         Button {
-                            // Some action
+                            withAnimation(.spring()) {
+                                if imageScale > 1 {
+                                    imageScale -= 1
+                                }
+                                
+                                if imageScale <= 1 {
+                                        resetImageState()
+                                    }
+                                }
                         } label: {
                             ControlImageView(icon: "minus.magnifyingglass")
 
                         }
                         // RESET
                         Button {
-                            // Some action
+                            resetImageState()
                         } label: {
                             ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
 
@@ -98,7 +106,15 @@ struct ContentView: View {
                         
                         // SCALE UP
                         Button {
-                            // Some action
+                            withAnimation(.spring()) {
+                                if imageScale < 5 {
+                                    imageScale += 1
+                                }
+                                
+                                if  imageScale >= 5 {
+                                    imageScale = 5
+                                }
+                            }
                         } label: {
                             ControlImageView(icon: "plus.magnifyingglass")
 

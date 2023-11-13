@@ -32,17 +32,17 @@ struct InfoPanelView: View {
             //MARK: - INFO PANEL
             HStack(spacing: 2) {
                 Image(systemName: "arrow.up.left.and.arrow.down.right")
-                Text("\(scale)")
+                Text("\(Int(scale))")
                 
                 Spacer()
                 
                 Image(systemName: "arrow.left.and.right")
-                Text("\(offset.width)")
+                Text("\(Int(offset.width))")
                 
                 Spacer()
                 
                 Image(systemName: "arrow.up.and.down")
-                Text("\(offset.height)")
+                Text("\(Int(offset.height))")
                 
                 Spacer()
             }
