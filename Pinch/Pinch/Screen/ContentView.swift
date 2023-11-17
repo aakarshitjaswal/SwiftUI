@@ -151,6 +151,35 @@ struct ContentView: View {
                     .padding(.bottom, 30)
                 , alignment: .bottom
             )
+            .overlay(
+                //MARK: DRAWER
+                
+                HStack {
+                   //MARK: DRAWER HANDLE
+                    Image(systemName: "chevron.compact.left")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+                        .padding(8)
+                        .foregroundStyle(.secondary
+                        
+                        )
+                   
+                    //MARK: THUMBNAILS
+                        
+                    Spacer()
+                }
+                    .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
+                    .background(.ultraThinMaterial)
+                    .padding()
+                    .cornerRadius(12)
+                    .opacity(isAnimating ? 1: 0)
+                    .frame(width: 260)
+                    .padding(.top, UIScreen.main.bounds.height / 12)
+                ,alignment: .topTrailing
+                    
+                
+            )
         } //: NAVIGATION
         
     }
