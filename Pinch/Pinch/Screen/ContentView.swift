@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
     @State private var imageOffset: CGSize = .zero
+    @State private var isDrawerOpen: Bool = false
     // MARK: - FUNCTION
     
     func resetImageState() {
@@ -161,9 +162,10 @@ struct ContentView: View {
                         .scaledToFit()
                         .frame(height: 40)
                         .padding(8)
-                        .foregroundStyle(.secondary
-                        
-                        )
+                        .foregroundStyle(.secondary)
+                        .onTapGesture { _ in
+                            isDrawerOpen.toggle()
+                        }
                    
                     //MARK: THUMBNAILS
                         
@@ -171,14 +173,12 @@ struct ContentView: View {
                 }
                     .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
                     .background(.ultraThinMaterial)
-                    .padding()
                     .cornerRadius(12)
                     .opacity(isAnimating ? 1: 0)
                     .frame(width: 260)
                     .padding(.top, UIScreen.main.bounds.height / 12)
+                    .offset(x: isDrawerOpen ? 20 : 254)
                 ,alignment: .topTrailing
-                    
-                
             )
         } //: NAVIGATION
         
