@@ -155,16 +155,19 @@ struct ContentView: View {
             .overlay(
                 //MARK: DRAWER
                 
-                HStack {
+                HStack(spacing: 12) {
                    //MARK: DRAWER HANDLE
-                    Image(systemName: "chevron.compact.left")
+                    Image(systemName: isDrawerOpen ? "chevron.compact.right" : "chevron.compact.left" )
                         .resizable()
                         .scaledToFit()
                         .frame(height: 40)
                         .padding(8)
                         .foregroundStyle(.secondary)
                         .onTapGesture { _ in
-                            isDrawerOpen.toggle()
+                            withAnimation(.easeOut) {
+                                isDrawerOpen.toggle()
+                            }
+                            
                         }
                    
                     //MARK: THUMBNAILS
@@ -177,7 +180,7 @@ struct ContentView: View {
                     .opacity(isAnimating ? 1: 0)
                     .frame(width: 260)
                     .padding(.top, UIScreen.main.bounds.height / 12)
-                    .offset(x: isDrawerOpen ? 20 : 254)
+                    .offset(x: isDrawerOpen ? 20 : 224)
                 ,alignment: .topTrailing
             )
         } //: NAVIGATION
