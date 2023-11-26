@@ -16,6 +16,7 @@
 		8FEEFA1B2B0CD93100497099 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEFA1A2B0CD93100497099 /* OnboardingView.swift */; };
 		8FEEFA1E2B0E2CB800497099 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEFA1D2B0E2CB800497099 /* FruitModel.swift */; };
 		8FEEFA212B0E2D4000497099 /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEFA202B0E2D4000497099 /* FruitData.swift */; };
+		8FEEFA232B13805C00497099 /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEFA222B13805C00497099 /* FruitRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8FEEFA1A2B0CD93100497099 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8FEEFA1D2B0E2CB800497099 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		8FEEFA202B0E2D4000497099 /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		8FEEFA222B13805C00497099 /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				8F047CAB2B0A7A4700E41ABB /* FruitCardView.swift */,
 				8FEEFA182B0CD6C500497099 /* StartButtonView.swift */,
+				8FEEFA222B13805C00497099 /* FruitRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				8FEEFA212B0E2D4000497099 /* FruitData.swift in Sources */,
 				8F047C9E2B0A765100E41ABB /* ContentView.swift in Sources */,
+				8FEEFA232B13805C00497099 /* FruitRowView.swift in Sources */,
 				8FEEFA192B0CD6C500497099 /* StartButtonView.swift in Sources */,
 				8F047CAC2B0A7A4700E41ABB /* FruitCardView.swift in Sources */,
 				8FEEFA1B2B0CD93100497099 /* OnboardingView.swift in Sources */,
