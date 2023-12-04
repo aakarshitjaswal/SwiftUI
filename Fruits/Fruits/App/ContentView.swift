@@ -28,6 +28,7 @@ struct ContentView: View {
             }
             .navigationTitle("Fruits")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
