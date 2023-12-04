@@ -42,14 +42,18 @@ struct FruitDetailView: View {
                             .multilineTextAlignment(.leading)
                         
                         //LINK
+                        SourceLinkView()
+                            .padding(.top, 10)
+                            .padding(.bottom, 40)
                         
                     })//: VSTACK
                     .padding(.horizontal, 20)
                     .frame(maxWidth: 640, alignment: .center)
                 })//: VSTACK
                 .navigationBarTitle(fruit.title, displayMode: .inline)
-
+                .navigationBarHidden(true)
             }//: SCROLL
+            .edgesIgnoringSafeArea(.top)
         }//: NAVIGATION
     }
 }
