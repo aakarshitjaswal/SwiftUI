@@ -10,14 +10,21 @@ import SwiftUI
 struct FruitNutrientsView: View {
     // MARK: PROPERTIES
     
+    var fruit: Fruit
+    let nutrients: [String] = ["Energy", "Sugar", "Fat", "Protein", "Vitamins", "Minerals"]
+    
     // MARK: BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GroupBox() {
+            DisclosureGroup("Nutritional value per 100g") {
+                Text("Hello, World!")
+            }
+        }
     }
 }
 
 #Preview {
-    FruitNutrientsView()
+    FruitNutrientsView(fruit: fruitsData[0])
         .preferredColorScheme(.dark)
         .padding()
 }
