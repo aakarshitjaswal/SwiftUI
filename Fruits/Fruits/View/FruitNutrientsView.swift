@@ -19,13 +19,21 @@ struct FruitNutrientsView: View {
             //Automatically handles expansion of a list with all the items inside of it.
             DisclosureGroup("Nutritional value per 100g") {
                 ForEach(0..<nutrients.count, id: \.self) { item in
+                    
+                    Divider().padding(.vertical, 2)
+                    
                     HStack {
-                        Text(nutrients[item])
-                        Spacer()
+                        Group {
+                            Image(systemName: "info.circle")
+                            Text(nutrients[item])
+                        }
+                        .foregroundColor(fruit.gradientColors[1])
+                        .font(Font.system(.body).bold())
+                        Spacer(minLength: 25)
                         Text(fruit.nutrition[item])
+                            .multilineTextAlignment(.trailing)
                     }
                 }
-                Text("Hello, World!")
             }
         }
     }
